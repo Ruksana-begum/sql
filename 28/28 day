@@ -1,0 +1,29 @@
+create database HeroVired;
+create table rgm(
+id int primary key not null,
+name varchar(30) not null,
+session varchar(30) not null,
+contact int not null,
+address varchar(25) not null
+); 
+
+select * from HeroVired.rgm;
+INSERT INTO rgm VALUES (101,"sai","JAVA",45677,"krnl");
+INSERT INTO rgm VALUES (102,"suma","pyth",457,"nan");
+INSERT INTO rgm VALUES (103,"sai","Jsp",456,"krnl nan");
+INSERT INTO rgm VALUES (104,"aui","cd",12,"hyd");
+INSERT INTO rgm VALUES (105,"bab","full",234,"japan");
+INSERT INTO rgm VALUES (106,"ruk","stack",56,"nlnan");
+INSERT INTO rgm VALUES (107,"ruk","pyth",5006,"nlyunan");
+select * from rgm where session= "pyth";
+select id,session from rgm where session ="JAVA"
+select * from rgm
+select id,name,session from rgm where session ="stack";
+select * from rgm where session ="JAVA" AND address="krnl";
+-- search name starts with "s"
+select * from rgm where name like 's%'; -- first letter s in name
+select * from rgm where name like '%a'; -- last letter a in name
+select * from rgm where name like '_a%'; -- second name a in name
+select * from rgm where name not like 's%'; -- expect name s in name
+select * from rgm where name not like '_a%'; -- expect name s in name
+
